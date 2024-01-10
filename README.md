@@ -28,6 +28,59 @@ Production Deployment link for chat application: [Chat App](http://35.224.20.5:3
 - **Continuous delivery -** Achieved using GitHub Actions
 
 
+## References:
+* https://flask.palletsprojects.com/en/2.0.x/
+* https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application
+* https://devcenter.heroku.com/articles/getting-started-with-python
+
+# ChatApp 
+
+## Overview
+
+ChatApp is a simple chat application developed in Python, featuring a Flask-based backend. It leverages Redis for real-time messaging and utilizes various utility functions for configuration and database management.
+
+## Features
+
+- **Friend Management:** Add and manage friends with the `/friend/add` endpoint.
+- **Database Status:** Retrieve the database status using the `/dbstatus` endpoint.
+- **Friend List:** Obtain the list of friends with the `/friends` endpoint.
+- **Messaging:** Send and receive messages through the `/send` endpoint.
+- **User Creation:** Create new users using the `/createuser` endpoint.
+
+## Requirements
+
+- Flask
+- Gunicorn
+- Flask-Heroku
+- Redis
+- Fakeredis
+
+## Configuration
+
+- Modify the `Configuration.py` file for any configuration-related settings, such as Redis connection details.
+
+## Endpoints
+
+1. **Add Friend:**
+   - **Endpoint:** `/friend/add`
+   - **Method:** POST
+
+2. **Database Status:**
+   - **Endpoint:** `/dbstatus`
+   - **Method:** GET
+
+3. **Friend List:**
+   - **Endpoint:** `/friends`
+   - **Method:** GET
+
+4. **Send/Receive Message:**
+   - **Endpoint:** `/send`
+   - **Method:** POST, GET
+
+5. **Create User:**
+   - **Endpoint:** `/createuser`
+   - **Method:** POST
+
 ## Running the dev environment:
 
 There are a total of 3 processes. 
@@ -50,7 +103,4 @@ cd analyzer
 python3 analyzer.py
 ```
 
-## References:
-* https://flask.palletsprojects.com/en/2.0.x/
-* https://www.digitalocean.com/community/tutorials/how-to-use-web-forms-in-a-flask-application
-* https://devcenter.heroku.com/articles/getting-started-with-python
+---
